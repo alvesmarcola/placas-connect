@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placas Connect — Mais avaliações para o seu negócio</title>
+    <title>Placas Connect — Mais avaliações. Uma experiência mais simples.</title>
     <meta name="description" content="Facilite o acesso dos seus clientes à avaliação do Google com uma placa inteligente, equipada com QR Code e NFC.">
     
     <!-- Preload critical assets -->
     <link rel="preload" href="assets/placas.png" as="image">
+    <link rel="stylesheet" href="assets/landing-refinement.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2016,7 +2017,7 @@
                 <a href="https://app.placasconnect.com/" class="btn-primary-sm" target="_blank" rel="noopener">Cadastrar</a>
             </div>
 
-            <button class="mobile-menu-toggle" aria-label="Abrir menu" id="mobileMenuToggle">
+            <button class="mobile-menu-toggle" aria-label="Abrir menu" id="mobileMenuToggle" aria-controls="mobileMenu" aria-expanded="false">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -2037,492 +2038,58 @@
         </div>
     </header>
 
-    <!-- ========================================
-         HERO — Studio image as the protagonist
-         ======================================== -->
-    <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="hero-badge-dot">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </span>
-                        QR Code + NFC em uma placa
-                    </div>
-
-                    <h1 class="hero-title">
-                        <span class="line line-1">Mais avaliações para o <span class="highlight">seu negócio.</span></span>
-                        <span class="line line-2">Mais facilidade para o seu cliente.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        Facilite o acesso dos seus clientes à avaliação do Google com uma placa inteligente, equipada com QR Code e NFC.
-                    </p>
-
-                    <div class="hero-ctas">
-                        <a href="#contato" class="btn-primary">
-                            Quero minhas placas
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="#como-funciona" class="btn-secondary">Como funciona</a>
-                    </div>
-
-                    <p class="hero-note"><strong>Pedido mínimo:</strong> 3 unidades</p>
-                </div>
-
-                <!-- STUDIO PRODUCT IMAGE — PREMIUM SHOWCASE -->
-                <div class="hero-image-showcase" id="heroImageShowcase">
-                    <div class="hero-image-container" id="heroImageContainer">
-                        <img 
-                            src="assets/placas.png" 
-                            alt="Placas Connect — Placa preta e azul com QR Code e NFC para avaliações no Google"
-                            class="hero-product-image"
-                            id="heroProductImage"
-                        >
-
-                        <!-- Floating indicator: NFC (left side) -->
-                        <div class="hero-float-element hero-float-nfc" id="floatNfc">
-                            <div class="icon-circle">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M2 7v10M6 5v14M10 3v18M14 5v14M18 7v10M22 9v6"/>
-                                </svg>
-                            </div>
-                            NFC
-                        </div>
-
-                        <!-- Floating indicator: QR Code (right side) -->
-                        <div class="hero-float-element hero-float-qr" id="floatQr">
-                            <div class="icon-circle">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="7" height="7"/>
-                                    <rect x="14" y="3" width="7" height="7"/>
-                                    <rect x="3" y="14" width="7" height="7"/>
-                                    <rect x="14" y="14" width="3" height="3"/>
-                                    <path d="M21 14h-4v4M21 18h-1v3M17 21v-3"/>
-                                </svg>
-                            </div>
-                            QR Code
-                        </div>
-
-                        <!-- Floating: 5 stars -->
-                        <div class="hero-float-element hero-float-stars" id="floatStars">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </div>
-
-                        <!-- Floating: Google colors dot -->
-                        <div class="hero-float-element hero-float-google" id="floatGoogle">
-                            <div class="g-dots">
-                                <span class="g-dot" style="background:#4285F4"></span>
-                                <span class="g-dot" style="background:#EA4335"></span>
-                                <span class="g-dot" style="background:#FBBC05"></span>
-                                <span class="g-dot" style="background:#34A853"></span>
-                            </div>
-                            Avaliação Google
-                        </div>
-                    </div>
-                </div>
+    <main>
+        <section class="hero" id="inicio"><div class="container"><div class="hero-inner">
+            <div class="hero-content"><div class="hero-badge"><span class="hero-badge-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span> QR Code + NFC em uma placa</div>
+                <h1 class="hero-title"><span class="line line-1">Mais avaliações.<br><span class="highlight">Menos atrito.</span></span><span class="line line-2">Uma experiência mais simples.</span></h1>
+                <p class="hero-description">Uma placa inteligente com QR Code e NFC que facilita o acesso dos seus clientes à avaliação no Google.</p>
+                <p class="hero-price"><strong>R$ 25,00</strong><span>por unidade</span><span>Pedido mínimo: 3 unidades</span></p>
+                <div class="hero-ctas"><a href="#preco" class="btn-primary">Quero minhas placas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="#como-funciona" class="btn-secondary">Como funciona</a></div>
             </div>
-        </div>
-    </section>
+            <div class="hero-image-showcase" id="heroImageShowcase"><div class="hero-image-container" id="heroImageContainer">
+                <img src="assets/placas.png" alt="Placas Connect nas cores preta e azul, com acesso por NFC e QR Code" class="hero-product-image" id="heroProductImage" fetchpriority="high">
+                <div class="hero-float-element hero-float-nfc"><div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7v10M6 5v14M10 3v18M14 5v14M18 7v10M22 9v6"/></svg></div>NFC</div>
+                <div class="hero-float-element hero-float-qr"><div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14h1v7h-7v-1"/></svg></div>QR Code</div>
+                <div class="hero-float-element hero-float-google"><div class="g-dots"><span class="g-dot" style="background:#4285F4"></span><span class="g-dot" style="background:#EA4335"></span><span class="g-dot" style="background:#FBBC05"></span><span class="g-dot" style="background:#34A853"></span></div>Um mesmo destino</div>
+            </div></div>
+        </div></div></section>
 
-    <!-- ========================================
-         COMO FUNCIONA
-         ======================================== -->
-    <section class="how-it-works" id="como-funciona">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label reveal">Como funciona</div>
-                <h2 class="section-title reveal stagger-1">Simples para o seu cliente.<br>Poderoso para o seu negócio.</h2>
-                <p class="section-subtitle reveal stagger-2">Em poucos segundos, seus clientes podem deixar uma avaliação no Google.</p>
-            </div>
+        <section class="how-it-works" id="como-funciona"><div class="container"><div class="section-header"><div class="section-label reveal">Como funciona</div><h2 class="section-title reveal stagger-1">Do toque à avaliação.</h2><p class="section-subtitle reveal stagger-2">A tecnologia faz o caminho. Para o cliente, é só aproximar ou escanear.</p></div>
+            <div class="steps-container" id="stepsContainer"><div class="steps-line" aria-hidden="true"><div class="steps-line-progress" id="stepsLineProgress"></div></div>
+                <article class="step-card reveal stagger-3" data-step="1"><div class="step-number">01</div><h3 class="step-title">Aproxime ou escaneie</h3><p class="step-text">Use o NFC do celular ou a câmera para ler o QR Code.</p></article>
+                <article class="step-card reveal stagger-4" data-step="2"><div class="step-number">02</div><h3 class="step-title">Acesse o link</h3><p class="step-text">Os dois caminhos levam ao link do estabelecimento.</p></article>
+                <article class="step-card reveal stagger-5" data-step="3"><div class="step-number">03</div><h3 class="step-title">Avalie no Google</h3><p class="step-text">O cliente chega à página de avaliação para compartilhar sua experiência.</p></article>
+            </div></div></section>
 
-            <div class="steps-container" id="stepsContainer">
-                <div class="steps-line" aria-hidden="true">
-                    <div class="steps-line-progress" id="stepsLineProgress"></div>
-                </div>
+        <section class="route-section flow-reveal" id="qr-nfc"><div class="container"><div class="route-head"><div class="section-label">Uma placa, dois caminhos</div><h2 class="section-title">Dois caminhos.<br>Um mesmo destino.</h2><p class="section-subtitle">Cada cliente escolhe como chegar ao link do estabelecimento.</p></div>
+            <div class="route-diagram" id="routeDiagram" data-active=""><button class="route-option" type="button" data-mode="qr"><b>QR CODE</b><span>Escaneie com a câmera.</span></button><div class="route-product"><img src="assets/placas.png" alt="Placas preta e azul com QR Code e NFC"><span class="route-destination"><b>GOOGLE</b> · avaliação</span></div><button class="route-option" type="button" data-mode="nfc"><b>NFC</b><span>Aproxime o celular.</span></button></div>
+        </div></section>
 
-                <div class="step-card reveal stagger-3" data-step="1">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="12" y="4" width="24" height="40" rx="3"/>
-                            <line x1="20" y1="38" x2="28" y2="38"/>
-                            <path d="M6 20c-2-2-2-5 0-7M42 13c2 2 2 5 0 7" opacity="0.5"/>
-                            <path d="M9 18c-1-1-1-3 0-4M39 14c1 1 1 3 0 4" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">Aproxime ou escaneie</h3>
-                    <p class="step-text">O cliente aproxima o celular da placa ou aponta a câmera para o QR Code.</p>
-                </div>
+        <section class="setup-section" id="configuracao"><div class="container setup-grid"><div class="setup-copy"><div class="section-label reveal">Preparação da placa</div><h2 class="section-title reveal stagger-1">Tecnologia por trás.<br>Simplicidade na frente.</h2><p class="section-subtitle reveal stagger-2">O mesmo link é preparado para os dois caminhos. Depois, para o cliente, basta aproximar ou escanear.</p></div>
+            <div class="setup-flow" aria-label="Fluxo de configuração da placa"><div class="setup-row"><span class="flow-index">01</span><b>Superchat</b><span class="flow-note">link do estabelecimento</span></div><div class="setup-row"><span class="flow-index">02</span><b>Placas Connect</b><span class="flow-note">configura o QR Code</span></div><div class="setup-row"><span class="flow-index">03</span><b>NFC Tools</b><span class="flow-note">grava o mesmo link no NFC</span></div><div class="setup-row"><span class="flow-index">04</span><b>QR Code + NFC</b><span class="flow-note">dois acessos, um link</span></div><div class="setup-row"><span class="flow-index">05</span><b>Google</b><span class="flow-note">página de avaliação</span></div></div>
+        </div></section>
 
-                <div class="step-card reveal stagger-4" data-step="2">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="24" cy="24" r="18"/>
-                            <path d="M24 14v10l6 4"/>
-                            <path d="M38 10l4-4M10 10L6 6" opacity="0.4"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">Acesse</h3>
-                    <p class="step-text">Ele é direcionado rapidamente para a avaliação do seu negócio no Google.</p>
-                </div>
+        <section class="product-section" id="produto"><div class="container"><div class="product-inner"><div class="product-image-area"><div class="product-image-frame reveal-scale" id="productImageFrame"><img src="assets/placas.png" alt="Placas Connect preta e azul, vistas de frente"></div></div>
+            <div class="product-content"><div class="section-label reveal">O produto</div><h2 class="section-title reveal stagger-1">Uma placa que trabalha pelo seu negócio.</h2><p class="section-subtitle reveal stagger-2">Um produto físico para deixar o acesso à avaliação do Google à mão. Seu cliente escolhe entre QR Code e NFC; os dois levam ao mesmo link.</p><div class="product-features reveal stagger-3"><div class="feature-chip">QR Code</div><div class="feature-divider">+</div><div class="feature-chip">NFC</div><div class="feature-divider">→</div><div class="feature-chip">Google</div></div>
+                <div class="product-price-block reveal stagger-4" id="priceBlock"><div class="product-price" id="priceValue">R$ 25</div><div class="product-price-unit" id="priceUnit">/ unidade</div><div class="product-price-min" id="priceMin">Pedido mínimo: 3 unidades</div><a href="https://app.placasconnect.com/" class="price-cta" target="_blank" rel="noopener">Quero minhas placas <span aria-hidden="true">↗</span></a></div>
+            </div></div></div></section>
 
-                <div class="step-card reveal stagger-5" data-step="3">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="24,6 29,18 42,19 32,28 35,42 24,35 13,42 16,28 6,19 19,18"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-title">Avalie</h3>
-                    <p class="step-text">Em poucos segundos, pode deixar sua avaliação.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="in-practice-section" id="na-pratica"><div class="container"><div class="in-practice-inner"><div class="in-practice-content"><div class="section-label reveal">Na prática</div><h2 class="section-title reveal stagger-1">Presente no momento certo.</h2><p class="section-subtitle reveal stagger-2">As placas preta e azul em uso real — prontas para ficar no ponto de contato com seu cliente.</p></div><div class="in-practice-image-area"><div class="in-practice-image-frame reveal-scale stagger-2"><img src="assets/img/placas-connect-produto.jpeg" alt="Placas Connect preta e azul sendo seguradas em um ambiente externo" loading="lazy"></div></div></div></div></section>
 
-    <!-- ========================================
-         PRODUTO — Studio image for premium display
-         ======================================== -->
-    <section class="product-section" id="produto">
-        <div class="container">
-            <div class="product-inner">
-                <div class="product-image-area">
-                    <div class="product-image-frame reveal-scale" id="productImageFrame">
-                        <img 
-                            src="assets/placas.png" 
-                            alt="Placa Connect preta e azul com QR Code e NFC"
-                        >
+        <section class="system-section" id="plataforma"><div class="container"><div class="system-inner"><div class="section-label reveal">Plataforma Placas Connect</div><h2 class="section-title reveal stagger-1">Por trás de cada placa,<br>existe a Placas Connect.</h2><p class="section-subtitle reveal stagger-2">A plataforma é utilizada para configurar e controlar os links associados às placas.</p><a href="https://app.placasconnect.com/" class="btn-outline-light reveal stagger-3" target="_blank" rel="noopener">Acessar Placas Connect <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></section>
 
-                        <!-- Desktop indicators -->
-                        <div class="product-indicator product-indicator-nfc reveal-left stagger-3" id="indicatorNfc">
-                            <div class="indicator-icon nfc-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M2 7v10M6 5v14M10 3v18M14 5v14M18 7v10M22 9v6"/>
-                                </svg>
-                            </div>
-                            Tecnologia NFC
-                        </div>
+        <section class="conversion-section" id="preco"><div class="container"><div class="conversion-inner"><div class="section-label reveal">Placas Connect</div><h2 class="section-title reveal stagger-1">Seu próximo cliente está<br>a um toque de avaliar.</h2><p class="section-subtitle reveal stagger-2">Simplifique o caminho entre o seu negócio e a avaliação no Google.</p><div class="conversion-price-row reveal stagger-3" id="conversionPriceRow"><div class="conversion-price-item"><div class="conversion-price-value">R$ 25,00</div><div class="conversion-price-label">por unidade</div></div><div class="conversion-divider" aria-hidden="true"></div><div class="conversion-price-item"><div class="conversion-price-value">3 unidades</div><div class="conversion-price-label">pedido mínimo</div></div></div><a href="https://app.placasconnect.com/" class="btn-primary reveal stagger-4" id="ctaFinal" target="_blank" rel="noopener">Quero minhas placas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></section>
 
-                        <div class="product-indicator product-indicator-qr reveal-right stagger-4" id="indicatorQr">
-                            <div class="indicator-icon qr-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="7" height="7"/>
-                                    <rect x="14" y="3" width="7" height="7"/>
-                                    <rect x="3" y="14" width="7" height="7"/>
-                                    <rect x="14" y="14" width="3" height="3"/>
-                                    <path d="M21 14h-4v4M21 18h-1v3M17 21v-3"/>
-                                </svg>
-                            </div>
-                            QR Code
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-content">
-                    <div class="section-label reveal">Produto</div>
-                    <h2 class="section-title reveal stagger-1">Uma placa.<br>Duas formas de acessar.</h2>
-                    <p class="section-subtitle reveal stagger-2">
-                        Seu cliente escolhe a forma mais conveniente: aproximar o celular com NFC ou escanear o QR Code. O resultado é o mesmo — uma avaliação no Google de forma rápida e simples.
-                    </p>
-
-                    <div class="product-features reveal stagger-3">
-                        <div class="feature-chip">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 7v10M6 5v14M10 3v18M14 5v14M18 7v10M22 9v6"/>
-                            </svg>
-                            NFC
-                        </div>
-                        <div class="feature-divider">+</div>
-                        <div class="feature-chip">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"/>
-                                <rect x="14" y="3" width="7" height="7"/>
-                                <rect x="3" y="14" width="7" height="7"/>
-                                <rect x="14" y="14" width="3" height="3"/>
-                                <path d="M21 14h-4v4M21 18h-1v3M17 21v-3"/>
-                            </svg>
-                            QR Code
-                        </div>
-                    </div>
-
-                    <div class="product-price-block reveal stagger-4" id="priceBlock">
-                        <div class="product-price" id="priceValue">R$ 25,00</div>
-                        <div class="product-price-unit" id="priceUnit">por unidade</div>
-                        <div class="product-price-min" id="priceMin">Pedido mínimo de 3 unidades</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         NA PRÁTICA — Real-life photo section
-         ======================================== -->
-    <section class="in-practice-section" id="na-pratica">
-        <div class="container">
-            <div class="in-practice-inner">
-                <div class="in-practice-content">
-                    <div class="section-label reveal">Na prática</div>
-                    <h2 class="section-title reveal stagger-1">Feita para o dia a dia<br>do seu negócio.</h2>
-                    <p class="section-subtitle reveal stagger-2">
-                        A placa é compacta, resistente e pensada para ficar em balcões, mesas ou qualquer ponto de contato com o cliente.
-                    </p>
-
-                    <ul class="in-practice-list reveal stagger-3">
-                        <li>
-                            <span class="check-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </span>
-                            Basta o cliente aproximar o celular ou escanear o QR Code
-                        </li>
-                        <li>
-                            <span class="check-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </span>
-                            Disponível nas versões preta e azul
-                        </li>
-                        <li>
-                            <span class="check-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </span>
-                            Design profissional integrado à identidade Google
-                        </li>
-                        <li>
-                            <span class="check-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </span>
-                            Sem necessidade de app — funciona instantaneamente
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="in-practice-image-area">
-                    <div class="in-practice-image-frame reveal-scale stagger-2">
-                        <img 
-                            src="assets/img/placas-connect-produto.jpeg" 
-                            alt="Pessoa segurando as placas Connect preta e azul em ambiente real"
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SISTEMA PLACAS CONNECT
-         ======================================== -->
-    <section class="system-section" id="sistema">
-        <div class="container">
-            <div class="system-inner">
-                <div class="section-label reveal">Plataforma</div>
-                <h2 class="section-title reveal stagger-1">Suas placas conectadas a um<br>sistema simples.</h2>
-                <p class="section-subtitle reveal stagger-2">
-                    A placa faz parte da solução Placas Connect. Além do produto físico, você conta com uma plataforma para gerenciar suas placas e acompanhar seus resultados.
-                </p>
-
-                <div class="system-visual reveal stagger-3">
-                    <div class="system-feature">
-                        <div class="system-feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </div>
-                        <span class="system-feature-label">Painel de controle</span>
-                    </div>
-                    <div class="system-feature">
-                        <div class="system-feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <span class="system-feature-label">Gestão de placas</span>
-                    </div>
-                    <div class="system-feature">
-                        <div class="system-feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                            </svg>
-                        </div>
-                        <span class="system-feature-label">Fácil de usar</span>
-                    </div>
-                </div>
-
-                <a href="https://app.placasconnect.com/" class="btn-outline-light reveal stagger-4" target="_blank" rel="noopener">
-                    Acessar Placas Connect
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         CONVERSÃO
-         ======================================== -->
-    <section class="conversion-section" id="contato">
-        <div class="container">
-            <div class="conversion-inner">
-                <div class="section-label reveal">Comece agora</div>
-                <h2 class="section-title reveal stagger-1">Comece a transformar seus clientes<br>em avaliações.</h2>
-                <p class="section-subtitle reveal stagger-2">
-                    Facilite o processo de avaliação para o seu público com uma solução simples, rápida e profissional.
-                </p>
-
-                <div class="conversion-price-row reveal stagger-3" id="conversionPriceRow">
-                    <div class="conversion-price-item">
-                        <div class="conversion-price-value">R$ 25,00</div>
-                        <div class="conversion-price-label">por unidade</div>
-                    </div>
-                    <div class="conversion-divider" aria-hidden="true"></div>
-                    <div class="conversion-price-item">
-                        <div class="conversion-price-value">3 unidades</div>
-                        <div class="conversion-price-label">pedido mínimo</div>
-                    </div>
-                </div>
-
-                <a href="#" class="btn-primary reveal stagger-4" id="ctaFinal">
-                    Quero minhas placas
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         FAQ
-         ======================================== -->
-    <section class="faq-section" id="duvidas">
-        <div class="container">
-            <div class="faq-inner">
-                <div class="section-header" style="text-align:left;">
-                    <div class="section-label reveal">Dúvidas frequentes</div>
-                    <h2 class="section-title reveal stagger-1">Perguntas & Respostas</h2>
-                </div>
-
-                <div class="faq-list reveal stagger-2">
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Como funciona a placa?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>A placa possui QR Code e tecnologia NFC. O cliente do seu estabelecimento pode aproximar o celular da placa ou escanear o QR Code com a câmera. Ao fazer isso, ele é direcionado automaticamente para a página de avaliação do seu negócio no Google, podendo deixar uma avaliação em poucos segundos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            O que é NFC?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>NFC (Near Field Communication) é uma tecnologia de comunicação sem fio de curto alcance. Ela permite que o celular do cliente, ao ser aproximado da placa, reconheça automaticamente o link e direcione para a avaliação no Google — sem precisar abrir a câmera ou instalar aplicativos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Posso utilizar o QR Code?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>Sim! A placa possui tanto NFC quanto QR Code. Se o celular do cliente não for compatível com NFC, basta apontar a câmera para o QR Code que ele será direcionado para a avaliação normalmente.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Qual o valor da placa?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>O valor para revendedor é de R$ 25,00 por unidade.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Existe pedido mínimo?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>Sim. O pedido mínimo é de 3 unidades.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            Onde posso acessar o sistema Placas Connect?
-                            <span class="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                <p>Você pode acessar o sistema diretamente pelo endereço <a href="https://app.placasconnect.com/" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 500;">app.placasconnect.com</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="faq-section" id="duvidas"><div class="container"><div class="faq-inner"><div class="section-header"><div class="section-label reveal">Dúvidas frequentes</div><h2 class="section-title reveal stagger-1">Perguntas diretas.</h2></div><div class="faq-list reveal stagger-2">
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Como funciona a placa?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>O cliente aproxima o celular para usar o NFC ou escaneia o QR Code com a câmera. A placa leva ao link do estabelecimento para deixar uma avaliação no Google.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">QR Code e NFC levam para o mesmo link?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>Sim. Os dois são configurados com o mesmo link do estabelecimento.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">O que é NFC?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>É uma tecnologia de comunicação por aproximação. O cliente aproxima o celular compatível da placa para acessar o link.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Como o cliente deixa a avaliação?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>Depois de aproximar o celular ou escanear o QR Code, ele acessa o link configurado para a avaliação do estabelecimento no Google.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Quanto custa?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>R$ 25,00 por unidade.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Qual é o pedido mínimo?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>O pedido mínimo é de 3 unidades.</p></div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Como a placa é configurada?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner"><p>O link do estabelecimento é usado para configurar o QR Code pela Placas Connect e gravar o mesmo link no NFC com NFC Tools.</p></div></div></div>
+        </div></div></div></section>
+    </main>
 
     <!-- ========================================
          FOOTER
@@ -2624,6 +2191,7 @@
             mobileToggle.classList.toggle('active');
             mobileMenu.classList.toggle('open');
             mobileToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
             document.body.style.overflow = isOpen ? '' : 'hidden';
         });
 
@@ -2760,8 +2328,8 @@
                     tiltX += (targetTiltX - tiltX) * 0.06;
                     tiltY += (targetTiltY - tiltY) * 0.06;
 
-                    heroImage.style.transform =
-                        'perspective(1000px) rotateX(' + tiltX.toFixed(2) + 'deg) rotateY(' + tiltY.toFixed(2) + 'deg)';
+                    heroContainer.style.transform =
+                        'rotateX(' + tiltX.toFixed(2) + 'deg) rotateY(' + tiltY.toFixed(2) + 'deg)';
 
                     requestAnimationFrame(animateTilt);
                 }
@@ -2834,6 +2402,43 @@
                     el.style.animationPlayState = 'running';
                 }, 2200);
             });
+        }
+
+        // QR/NFC interaction and the real plaque setup sequence.
+        var routeDiagram = document.getElementById('routeDiagram');
+        if (routeDiagram) {
+            routeDiagram.querySelectorAll('.route-option').forEach(function(option) {
+                option.addEventListener('mouseenter', function() { routeDiagram.dataset.active = option.dataset.mode; });
+                option.addEventListener('focus', function() { routeDiagram.dataset.active = option.dataset.mode; });
+                option.addEventListener('mouseleave', function() { routeDiagram.dataset.active = ''; });
+                option.addEventListener('blur', function() { routeDiagram.dataset.active = ''; });
+            });
+        }
+
+        var flowSection = document.querySelector('.route-section.flow-reveal');
+        var setupRows = document.querySelectorAll('.setup-row');
+        if (prefersReducedMotion) {
+            if (flowSection) flowSection.classList.add('is-visible');
+            setupRows.forEach(function(row) { row.classList.add('is-seen'); });
+        } else {
+            var flowObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        flowObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            if (flowSection) flowObserver.observe(flowSection);
+            var setupObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-seen');
+                        setupObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.35 });
+            setupRows.forEach(function(row) { setupObserver.observe(row); });
         }
 
         // ============================================
