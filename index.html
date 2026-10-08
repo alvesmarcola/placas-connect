@@ -8,7 +8,6 @@
     
     <!-- Preload critical assets -->
     <link rel="preload" href="assets/placas.png" as="image">
-    <link rel="stylesheet" href="assets/landing-refinement.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1987,6 +1986,7 @@
             background: var(--color-text-lighter);
         }
     </style>
+    <link rel="stylesheet" href="assets/landing-refinement.css">
 </head>
 <body>
 
@@ -2041,7 +2041,7 @@
     <main>
         <section class="hero" id="inicio"><div class="container"><div class="hero-inner">
             <div class="hero-content"><div class="hero-badge"><span class="hero-badge-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span> QR Code + NFC em uma placa</div>
-                <h1 class="hero-title"><span class="line line-1">Mais avaliações.<br><span class="highlight">Menos atrito.</span></span><span class="line line-2">Uma experiência mais simples.</span></h1>
+                <h1 class="hero-title"><span class="line line-1">Mais avaliações.<br><span class="highlight">Menos atrito.</span></span></h1>
                 <p class="hero-description">Uma placa inteligente com QR Code e NFC que facilita o acesso dos seus clientes à avaliação no Google.</p>
                 <p class="hero-price"><strong>R$ 25,00</strong><span>por unidade</span><span>Pedido mínimo: 3 unidades</span></p>
                 <div class="hero-ctas"><a href="#preco" class="btn-primary">Quero minhas placas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="#como-funciona" class="btn-secondary">Como funciona</a></div>
@@ -2050,7 +2050,7 @@
                 <img src="assets/placas.png" alt="Placas Connect nas cores preta e azul, com acesso por NFC e QR Code" class="hero-product-image" id="heroProductImage" fetchpriority="high">
                 <div class="hero-float-element hero-float-nfc"><div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7v10M6 5v14M10 3v18M14 5v14M18 7v10M22 9v6"/></svg></div>NFC</div>
                 <div class="hero-float-element hero-float-qr"><div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14h1v7h-7v-1"/></svg></div>QR Code</div>
-                <div class="hero-float-element hero-float-google"><div class="g-dots"><span class="g-dot" style="background:#4285F4"></span><span class="g-dot" style="background:#EA4335"></span><span class="g-dot" style="background:#FBBC05"></span><span class="g-dot" style="background:#34A853"></span></div>Um mesmo destino</div>
+                <div class="hero-float-element hero-float-google"><div class="g-dots"><span class="g-dot" style="background:#4285F4"></span><span class="g-dot" style="background:#EA4335"></span><span class="g-dot" style="background:#FBBC05"></span><span class="g-dot" style="background:#34A853"></span></div>Google · avaliação</div>
             </div></div>
         </div></div></section>
 
@@ -2345,6 +2345,25 @@
         // PRODUCT IMAGE: Parallax on scroll
         // ============================================
         if (!prefersReducedMotion) {
+            var heroShowcase = document.getElementById('heroImageShowcase');
+            var heroSection = document.getElementById('inicio');
+            var heroScrollPending = false;
+
+            function updateHeroParallax() {
+                if (heroScrollPending || !heroShowcase || !heroSection) return;
+                heroScrollPending = true;
+                requestAnimationFrame(function() {
+                    heroScrollPending = false;
+                    var rect = heroSection.getBoundingClientRect();
+                    if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                        var shift = Math.max(-12, Math.min(12, rect.top * -0.018));
+                        heroShowcase.style.setProperty('--hero-shift', shift.toFixed(1) + 'px');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateHeroParallax, { passive: true });
+
             var productFrame = document.getElementById('productImageFrame');
 
             if (productFrame) {
