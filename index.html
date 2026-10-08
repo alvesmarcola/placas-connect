@@ -1080,23 +1080,6 @@
             align-items: center;
         }
 
-        .product-image-area {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .product-image-frame {
-            position: relative;
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .product-image-frame img {
-            width: 100%;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12)) drop-shadow(0 8px 16px rgba(0,0,0,0.06));
-        }
-
         /* Feature indicators around the product */
         .product-indicator {
             position: absolute;
@@ -1717,10 +1700,6 @@
                 text-align: center;
             }
 
-            .product-image-area {
-                order: -1;
-            }
-
             .product-features {
                 justify-content: center;
             }
@@ -1836,10 +1815,6 @@
 
             .step-card {
                 padding: var(--space-6) var(--space-4);
-            }
-
-            .product-image-frame {
-                max-width: 340px;
             }
 
             .product-indicator-nfc,
@@ -2363,7 +2338,6 @@
             }
 
             window.addEventListener('scroll', updateHeroParallax, { passive: true });
-
         }
 
         // ============================================
